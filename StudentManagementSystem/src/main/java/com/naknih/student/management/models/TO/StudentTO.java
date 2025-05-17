@@ -19,7 +19,21 @@ public class StudentTO {
 	private boolean isCourseEnrolled;
 	
 	
+<<<<<<< HEAD
 	private StudentTO(int id, String firstName, String lastName, String email, String address, String city,
+=======
+	
+	
+	
+
+	public StudentTO() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+
+	public StudentTO(int id, String firstName, String lastName, String email, String address, String city,
+>>>>>>> ce6d4c0 (updating and pushed)
 			String state, String mobileNumber, LocalDate dateOfBirth, String college, LocalDate passoutYear,
 			String branch, boolean isCourseEnrolled) {
 		super();

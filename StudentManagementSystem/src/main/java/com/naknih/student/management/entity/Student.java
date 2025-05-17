@@ -10,11 +10,15 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
+<<<<<<< HEAD
 // id, first_name, last_name, email, address, mobile_number, date_of_birth, college, passout_year, branch, enrolled_course, date
+=======
+>>>>>>> ce6d4c0 (updating and pushed)
 
 @Entity
 @Table(name = "student")
 public class Student {
+<<<<<<< HEAD
 	
 	
 	@Id
@@ -33,12 +37,31 @@ public class Student {
 	@Column(name = "address")
 	private String address;
 	
+=======
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+
+	@Column(name = "first_name")
+	private String firstName;
+
+	@Column(name = "last_name")
+	private String lastName;
+
+	@Column(name = "email")
+	private String email;
+
+	@Column(name = "address")
+	private String address;
+>>>>>>> ce6d4c0 (updating and pushed)
 
 	@Column(name = "city")
 	private String city;
 
 	@Column(name = "state")
 	private String state;
+<<<<<<< HEAD
 	
 	@Column(name = "mobile_number")
 	private String mobileNumber;
@@ -62,6 +85,32 @@ public class Student {
 	private LocalDateTime enquiryDate;
 	
 	
+=======
+
+	@Column(name = "mobile_number")
+	private String mobileNumber;
+
+	@Column(name = "date_of_birth")
+	private LocalDate dateOfBirth;
+
+	@Column(name = "college")
+	private String college;
+
+	@Column(name = "passout_year")
+	private LocalDate passoutYear;
+
+	@Column(name = "branch")
+	private String branch;
+
+	@Column(name = "enrolled_course")
+	private boolean isCourseEnrolled;
+
+	@Column(name = "enquiry_date")
+	private LocalDateTime enquiryDate;
+
+	@Column(name = "status")
+	private boolean status;
+>>>>>>> ce6d4c0 (updating and pushed)
 
 	public Student() {
 		super();
@@ -81,7 +130,10 @@ public class Student {
 		this.enquiryDate = enquiryDate;
 	}
 
+<<<<<<< HEAD
 	
+=======
+>>>>>>> ce6d4c0 (updating and pushed)
 	public int getId() {
 		return id;
 	}
@@ -130,8 +182,11 @@ public class Student {
 		this.mobileNumber = mobileNumber;
 	}
 
+<<<<<<< HEAD
 	
 
+=======
+>>>>>>> ce6d4c0 (updating and pushed)
 	public LocalDate getDateOfBirth() {
 		return dateOfBirth;
 	}
@@ -151,8 +206,11 @@ public class Student {
 	public LocalDate getPassoutYear() {
 		return passoutYear;
 	}
+<<<<<<< HEAD
 	
 	
+=======
+>>>>>>> ce6d4c0 (updating and pushed)
 
 	public String getCity() {
 		return city;
@@ -198,14 +256,32 @@ public class Student {
 		this.enquiryDate = enquiryDate;
 	}
 
+<<<<<<< HEAD
+=======
+
+	public boolean isStatus() {
+		return status;
+	}
+
+	public void setStatus(boolean status) {
+		this.status = status;
+	}
+
+>>>>>>> ce6d4c0 (updating and pushed)
 	@Override
 	public String toString() {
 		return "Student [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
 				+ ", address=" + address + ", city=" + city + ", state=" + state + ", mobileNumber=" + mobileNumber
 				+ ", dateOfBirth=" + dateOfBirth + ", college=" + college + ", passoutYear=" + passoutYear + ", branch="
+<<<<<<< HEAD
 				+ branch + ", isCourseEnrolled=" + isCourseEnrolled + ", enquiryDate=" + enquiryDate + "]";
 	}
 
 	
+=======
+				+ branch + ", isCourseEnrolled=" + isCourseEnrolled + ", enquiryDate=" + enquiryDate + ", stauts="
+				+ status + "]";
+	}
+>>>>>>> ce6d4c0 (updating and pushed)
 	
 }

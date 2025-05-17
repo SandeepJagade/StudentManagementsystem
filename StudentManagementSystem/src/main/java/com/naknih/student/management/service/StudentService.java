@@ -10,5 +10,17 @@ public interface StudentService {
 	public SuccessObject getAllStudents();
 
 	public SuccessObject add(StudentTO student);
+<<<<<<< HEAD
+=======
+	
+	public SuccessObject deleteStudentById(Integer id);
+	
+	public SuccessObject searchStudents(String searchValue);
+	
+
+	public SuccessObject updateStudent(Integer id, StudentTO studentTO);
+	
+	
+>>>>>>> ce6d4c0 (updating and pushed)
 
 }
