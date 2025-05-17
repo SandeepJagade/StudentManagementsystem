@@ -30,6 +30,23 @@ public class StudentTOToEntityConverter {
 		student.setEnquiryDate(LocalDateTime.now());
 		return student;
 	}
+	
+	
+	public Student updateStudentToToStudentEntity(Student student, StudentTO studentTO) {
+		student.setFirstName(studentTO.getFirstName());
+		student.setLastName(studentTO.getLastName());
+		student.setEmail(studentTO.getEmail());
+		student.setAddress(studentTO.getAddress());
+		student.setCity(studentTO.getCity());
+		student.setState(studentTO.getState());
+		student.setMobileNumber(studentTO.getMobileNumber());
+		student.setDateOfBirth(studentTO.getDateOfBirth());
+		student.setCollege(studentTO.getCollege());
+		student.setPassoutYear(studentTO.getPassoutYear());
+		student.setBranch(studentTO.getBranch());
+		student.setCourseEnrolled(studentTO.isCourseEnrolled());
+		return student;
+	}
 
 
 	public StudentTO convertStudentEntityToStudentTO(Student student) {

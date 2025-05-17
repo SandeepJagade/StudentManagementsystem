@@ -75,4 +75,19 @@ public class StudentServiceImpl implements StudentService {
 		return new SuccessObject("FAIL","Data not found");
 	}
 
+
+	@Override
+	public SuccessObject updateStudent(Integer id, StudentTO studentTO) {
+		// TODO Auto-generated method stub
+		StudentTOToEntityConverter studentTOToEntityConverter = new StudentTOToEntityConverter();
+		Optional<Student> updateOptionalById = studentRepository.findById(id);
+		if(updateOptionalById.isPresent()) {
+			Student student = studentTOToEntityConverter.updateStudentToToStudentEntity(updateOptionalById.get(), studentTO);
+			Student updatedStudent = studentRepository.save(student);
+			return new SuccessObject("OK","Data Updated Successfully", updatedStudent);
+			
+		}
+		return new SuccessObject("FAIL","Dana not Updated");
+	}
+
 }

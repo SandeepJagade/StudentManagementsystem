@@ -54,5 +54,11 @@ public class StudentController {
 		return ResponseEntity.ok().body(allStudents);
 
 	}
+	
+	public ResponseEntity<SuccessObject> updateStudent(@PathVariable Integer id , @RequestBody StudentTO studentTO){
+		
+		SuccessObject updateStudent = studentService.updateStudent(id ,studentTO);
+		return ResponseEntity.ok().body(updateStudent);
+	}
 
 }
