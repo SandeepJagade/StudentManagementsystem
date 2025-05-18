@@ -1,7 +1,7 @@
 package com.naknih.student.management.repository;
 
 import java.util.List;
-
+import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
@@ -39,5 +39,7 @@ public interface StudentRepository extends JpaRepository<Student, Integer> {
 		       "LOWER(s.college) LIKE LOWER(CONCAT('%', :searchValue, '%'))" +
 		       ")")
 		List<StudentTO> searchStudents(@Param("searchValue") String searchValue);
+	
+	public Optional<Student> findByEmail(String email);
 }
 

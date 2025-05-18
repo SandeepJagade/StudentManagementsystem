@@ -14,7 +14,6 @@ public interface StudentService {
 	public SuccessObject deleteStudentById(Integer id);
 	
 	public SuccessObject searchStudents(String searchValue);
-	
 
 	public SuccessObject updateStudent(Integer id, StudentTO studentTO);
 	

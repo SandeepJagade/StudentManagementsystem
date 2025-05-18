@@ -6,6 +6,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.naknih.student.management.custom.exceptions.EmailAlreadyPresentException;
 import com.naknih.student.management.entity.Student;
 import com.naknih.student.management.models.TO.StudentTO;
 import com.naknih.student.management.repository.StudentRepository;
@@ -27,6 +28,8 @@ public class StudentServiceImpl implements StudentService {
 			StudentTO studentTo = studentEntityToStudentToConverter.convertStudentEntityToStudentTO(optStudent.get());
 			
 			return new SuccessObject("OK", "Student data found", studentTo);
+			
+			//return new SuccessObject(ResponseMessages.OK, ResponseMessages.STUDENT_DATA_FOUND, studentTo);
 		}
 		return new SuccessObject("FAIL", "Data not found");
 		
@@ -47,6 +50,11 @@ public class StudentServiceImpl implements StudentService {
 	@Override
 	public SuccessObject add(StudentTO studentTO) {
 		StudentTOToEntityConverter studentTOToEntityConverter = new StudentTOToEntityConverter();
+		Optional<Student> optStudent = studentRepository.findByEmail(studentTO.getEmail());
+		if (optStudent.isPresent()) {
+			throw new EmailAlreadyPresentException(String.format("Email already exists: %s", studentTO.getEmail()));
+		}
+		
 		Student student = studentTOToEntityConverter.convertStudentTOToStudentEntity(studentTO);
 		Student save = studentRepository.save(student);
 		return new SuccessObject("OK", "Student added successfully", save);

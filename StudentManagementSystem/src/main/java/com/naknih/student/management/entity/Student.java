@@ -60,6 +60,11 @@ public class Student {
 
 	@Column(name = "status")
 	private boolean status;
+//	
+//	@Column(name = "")
+//	private LocalDateTime enquiryDate;
+//
+//	
 
 	public Student() {
 		super();
