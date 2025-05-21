@@ -10,10 +10,43 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+// id, first_name, last_name, email, address, mobile_number, date_of_birth, college, passout_year, branch, enrolled_course, date
+=======
+>>>>>>> ce6d4c0 (updating and pushed)
+>>>>>>> 045c363133bbe817643788cc1576cf27aa799260
 
 @Entity
 @Table(name = "student")
 public class Student {
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+	
+	
+>>>>>>> 045c363133bbe817643788cc1576cf27aa799260
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+
+	@Column(name = "first_name")
+	private String firstName;
+
+	@Column(name = "last_name")
+	private String lastName;
+
+	@Column(name = "email")
+	private String email;
+
+	@Column(name = "address")
+	private String address;
+<<<<<<< HEAD
+=======
+	
+=======
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -30,12 +63,53 @@ public class Student {
 
 	@Column(name = "address")
 	private String address;
+>>>>>>> ce6d4c0 (updating and pushed)
+>>>>>>> 045c363133bbe817643788cc1576cf27aa799260
 
 	@Column(name = "city")
 	private String city;
 
 	@Column(name = "state")
 	private String state;
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+	
+>>>>>>> 045c363133bbe817643788cc1576cf27aa799260
+	@Column(name = "mobile_number")
+	private String mobileNumber;
+
+	@Column(name = "date_of_birth")
+	private LocalDate dateOfBirth;
+
+	@Column(name = "college")
+	private String college;
+
+	@Column(name = "passout_year")
+	private LocalDate passoutYear;
+
+	@Column(name = "branch")
+	private String branch;
+
+	@Column(name = "enrolled_course")
+	private boolean isCourseEnrolled;
+
+	@Column(name = "enquiry_date")
+	private LocalDateTime enquiryDate;
+<<<<<<< HEAD
+
+	@Column(name = "status")
+	private boolean status;
+//	
+//	@Column(name = "")
+//	private LocalDateTime enquiryDate;
+//
+//	
+=======
+	
+	
+=======
 
 	@Column(name = "mobile_number")
 	private String mobileNumber;
@@ -60,11 +134,8 @@ public class Student {
 
 	@Column(name = "status")
 	private boolean status;
-//	
-//	@Column(name = "")
-//	private LocalDateTime enquiryDate;
-//
-//	
+>>>>>>> ce6d4c0 (updating and pushed)
+>>>>>>> 045c363133bbe817643788cc1576cf27aa799260
 
 	public Student() {
 		super();
@@ -84,6 +155,13 @@ public class Student {
 		this.enquiryDate = enquiryDate;
 	}
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+	
+=======
+>>>>>>> ce6d4c0 (updating and pushed)
+>>>>>>> 045c363133bbe817643788cc1576cf27aa799260
 	public int getId() {
 		return id;
 	}
@@ -132,6 +210,14 @@ public class Student {
 		this.mobileNumber = mobileNumber;
 	}
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+	
+
+=======
+>>>>>>> ce6d4c0 (updating and pushed)
+>>>>>>> 045c363133bbe817643788cc1576cf27aa799260
 	public LocalDate getDateOfBirth() {
 		return dateOfBirth;
 	}
@@ -151,6 +237,14 @@ public class Student {
 	public LocalDate getPassoutYear() {
 		return passoutYear;
 	}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+	
+	
+=======
+>>>>>>> ce6d4c0 (updating and pushed)
+>>>>>>> 045c363133bbe817643788cc1576cf27aa799260
 
 	public String getCity() {
 		return city;
@@ -196,6 +290,11 @@ public class Student {
 		this.enquiryDate = enquiryDate;
 	}
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 045c363133bbe817643788cc1576cf27aa799260
 
 	public boolean isStatus() {
 		return status;
@@ -205,13 +304,30 @@ public class Student {
 		this.status = status;
 	}
 
+<<<<<<< HEAD
+=======
+>>>>>>> ce6d4c0 (updating and pushed)
+>>>>>>> 045c363133bbe817643788cc1576cf27aa799260
 	@Override
 	public String toString() {
 		return "Student [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
 				+ ", address=" + address + ", city=" + city + ", state=" + state + ", mobileNumber=" + mobileNumber
 				+ ", dateOfBirth=" + dateOfBirth + ", college=" + college + ", passoutYear=" + passoutYear + ", branch="
+<<<<<<< HEAD
 				+ branch + ", isCourseEnrolled=" + isCourseEnrolled + ", enquiryDate=" + enquiryDate + ", stauts="
 				+ status + "]";
 	}
+=======
+<<<<<<< HEAD
+				+ branch + ", isCourseEnrolled=" + isCourseEnrolled + ", enquiryDate=" + enquiryDate + "]";
+	}
+
+	
+=======
+				+ branch + ", isCourseEnrolled=" + isCourseEnrolled + ", enquiryDate=" + enquiryDate + ", stauts="
+				+ status + "]";
+	}
+>>>>>>> ce6d4c0 (updating and pushed)
+>>>>>>> 045c363133bbe817643788cc1576cf27aa799260
 	
 }

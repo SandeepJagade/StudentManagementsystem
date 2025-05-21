@@ -1,8 +1,17 @@
 package com.naknih.student.management.service.implementation;
 
+<<<<<<< HEAD
 import java.util.List;
 import java.util.Optional;
 
+=======
+<<<<<<< HEAD
+=======
+import java.util.List;
+import java.util.Optional;
+
+>>>>>>> ce6d4c0 (updating and pushed)
+>>>>>>> 045c363133bbe817643788cc1576cf27aa799260
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,21 +31,42 @@ public class StudentServiceImpl implements StudentService {
 
 	@Override
 	public SuccessObject getStudentById(Integer id) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+		// TODO Auto-generated method stub
+		return null;
+=======
+>>>>>>> 045c363133bbe817643788cc1576cf27aa799260
 		Optional<Student> optStudent = studentRepository.findById(id);
 		if (optStudent.isPresent()) {
 			StudentTOToEntityConverter studentEntityToStudentToConverter = new StudentTOToEntityConverter();
 			StudentTO studentTo = studentEntityToStudentToConverter.convertStudentEntityToStudentTO(optStudent.get());
 			
 			return new SuccessObject("OK", "Student data found", studentTo);
+<<<<<<< HEAD
 			
 			//return new SuccessObject(ResponseMessages.OK, ResponseMessages.STUDENT_DATA_FOUND, studentTo);
 		}
 		return new SuccessObject("FAIL", "Data not found");
 		
+=======
+		}
+		return new SuccessObject("FAIL", "Data not found");
+		
+>>>>>>> ce6d4c0 (updating and pushed)
+>>>>>>> 045c363133bbe817643788cc1576cf27aa799260
 	}
 
 	@Override
 	public SuccessObject getAllStudents() {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+		// TODO Auto-generated method stub
+		return null;
+=======
+>>>>>>> 045c363133bbe817643788cc1576cf27aa799260
 		List<Student> list = studentRepository.findAll();
 		if(list != null && !list.isEmpty()) {
 			StudentTOToEntityConverter studentTOToEntityConverter = new StudentTOToEntityConverter();
@@ -45,6 +75,10 @@ public class StudentServiceImpl implements StudentService {
 		}
 		
 		return new SuccessObject("FAIL","Data not found");
+<<<<<<< HEAD
+=======
+>>>>>>> ce6d4c0 (updating and pushed)
+>>>>>>> 045c363133bbe817643788cc1576cf27aa799260
 	}
 
 	@Override
@@ -60,6 +94,11 @@ public class StudentServiceImpl implements StudentService {
 		return new SuccessObject("OK", "Student added successfully", save);
 	}
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 045c363133bbe817643788cc1576cf27aa799260
 	@Override
 	public SuccessObject deleteStudentById(Integer id) {
 		Optional<Student> optionalStudById = studentRepository.findById(id);
@@ -98,4 +137,8 @@ public class StudentServiceImpl implements StudentService {
 		return new SuccessObject("FAIL","Dana not Updated");
 	}
 
+<<<<<<< HEAD
+=======
+>>>>>>> ce6d4c0 (updating and pushed)
+>>>>>>> 045c363133bbe817643788cc1576cf27aa799260
 }

@@ -19,6 +19,12 @@ public class StudentTO {
 	private boolean isCourseEnrolled;
 	
 	
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+	private StudentTO(int id, String firstName, String lastName, String email, String address, String city,
+=======
+>>>>>>> 045c363133bbe817643788cc1576cf27aa799260
 	
 	
 	
@@ -30,6 +36,10 @@ public class StudentTO {
 	
 
 	public StudentTO(int id, String firstName, String lastName, String email, String address, String city,
+<<<<<<< HEAD
+=======
+>>>>>>> ce6d4c0 (updating and pushed)
+>>>>>>> 045c363133bbe817643788cc1576cf27aa799260
 			String state, String mobileNumber, LocalDate dateOfBirth, String college, LocalDate passoutYear,
 			String branch, boolean isCourseEnrolled) {
 		super();
